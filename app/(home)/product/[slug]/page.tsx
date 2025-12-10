@@ -27,9 +27,12 @@ export default async function ProductDetailPage({params}: metaProps) {
   const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/product/" + slug);
   const detail = await response.json()
   
-  return (<>
-  <div className="h-screen">
-    <ProductDetail detail={detail} />
-  </div>
-  </>)
+  return (
+    <>
+      <div className="h-screen">
+        {/* <ProductDetail detail={detail} /> */}
+        <ProductDetail />
+      </div>
+    </>
+  );
 }
